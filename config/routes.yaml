@@ -1,0 +1,10 @@
+index:
+    path: /
+    controller: App\Controller\HomeController::index
+index_locale:
+    path:       /{_locale}
+    controller: App\Controller\HomeController::index
+    requirements:
+        _locale: en|fr
+
+ 

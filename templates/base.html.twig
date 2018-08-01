@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} Coding Challenge - Back End {% endblock %}
+</title>
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <ul id="navigation">
+            {% for item in navigation %}
+                <li><a href="{{ item[1]  }}">{{ item[0] | trans }}</a></li>
+            {% endfor %}
+        </ul>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+ul {
+    list-style-type: none;
+    margin: 1;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+select { 
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    border-radius: 2px; 
+    color: #555;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px; 
+    margin-top: 15px;
+}
+
+#configurator_item_1 {
+  margin-left:5.7%;
+}
+#configurator_item_2{
+  margin-left:5.7%;
+}
+#configurator_item_3{
+  margin-left:6.1%;
+}
+#configurator_item_4 {
+  margin-left:2.5%;
+}
+
+.square_text {
+    margin-top: 20px;
+    margin-left: 5.7%;
+}
