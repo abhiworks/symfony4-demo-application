@@ -32,6 +32,7 @@ class Configurator extends AbstractType
           // Iterate each field and arrange content like name, color n condtions
           foreach ( $fields as $field ) { 
            $choice['key'] = $key;
+           $choice['selectType'] = $field['selectType'];
            $choice['data'][$field['name']] = $field['id']; 
             $choice['data-color'][$field['name']]['data-color'] = $field['color']; // storing color
            $choice['conditions'] .= ($field['conditions'] != '')? $field['id'] .'-'.$field['conditions'].';':'';           
@@ -46,7 +47,7 @@ class Configurator extends AbstractType
             array(             
               'choices'   =>  $data , 
               'label'=> $choice['key'],
-              'attr' => array('data-color' => 'tinymce'),
+              'attr' => array('data-type' =>  $choice['selectType']),
               'choice_attr' =>  $data_attr, 
             ));
         if(isset($field['conditions']) && $field['conditions'] != '') { // Creating hidden values to store condirion
