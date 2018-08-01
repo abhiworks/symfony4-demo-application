@@ -14,4 +14,4 @@ Demo configurator application using symfony 4 framework
    Go to the directory and run below commands
    
  - composer install 
- - ./node_modules/.bin/encore dev
+ - npm install @symfony/webpack-encore --save-dev
