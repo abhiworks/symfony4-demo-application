@@ -28,7 +28,7 @@ class ConfiguratorItemsRepository extends ServiceEntityRepository
         $conn = $this->getEntityManager()->getConnection();
 
         $sql = '
-            SELECT ci.*, c.name as profileName, c.type as selectType
+            SELECT ci.*, c.name as profileName, c.type as selectType, c.hiddenCondition 
             FROM `configurator_items_options` ci
             INNER JOIN configurator_items c ON c.id = ci.configurator_item_id
             ORDER BY configurator_item_id ASC, sequence ASC
