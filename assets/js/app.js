@@ -1,6 +1,9 @@
 $(document).ready(function() { 
   for (i = 0; i < sessionStorage.length; i++) { // Get all previous selected values from the session
     $('#'+sessionStorage.key(i)).val(sessionStorage.getItem(sessionStorage.key(i)));
+    if($(" option[value="+sessionStorage.getItem(sessionStorage.key(i))+" ]").attr('data-color') != '') { // Set bg color of square
+      $(".square_text").css("background-color",$(" option[value="+sessionStorage.getItem(sessionStorage.key(i))+" ]").attr('data-color'));
+    }
   } 
 
   var profileVals = [];
